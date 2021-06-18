@@ -1,0 +1,30 @@
+.navbar {
+  background: #ffffff;
+  -webkit-box-shadow: 14px 2px 26px -4px rgba(0, 0, 0, 0.94);
+  -moz-box-shadow: 14px 2px 26px -4px rgba(0, 0, 0, 0.94);
+  box-shadow: 14px 2px 26px -4px rgba(0, 0, 0, 0.94);
+  color: #ffffff;
+  display: flex;
+  padding-left: 150px;
+  padding-right: 150px;
+  position: relative;
+}
+
+.navbar-expand-lg {
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.navbar .navbar-brand {
+  display: inline-block;
+  font-size: 1.25rem;
+  line-height: inherit;
+  margin-right: 1rem;
+  padding-bottom: .3125rem;
+  padding-top: .3125rem;
+  white-space: nowrap;
+}
+.text-decor-none:hover, a {
+    text-decoration: none;
+    color:#334652;
+}

@@ -1,0 +1,39 @@
+.title-section__header {
+  font-family: canada-type-gibson, Helvetica Neue, Arial, sans-serif;
+  color: #334652;
+  font-weight: 600;
+}
+
+.section--partial-background.section--partial-background--medium {
+  background-size: 40%;
+}
+
+.section--partial-background.section--partial-background--left-top {
+  background-position: 0;
+  background-position-y: 0;
+}
+
+.section--partial-background {
+  background-size: contain;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.section--partial-background.section--partial-background--tiny {
+  background-size: 5%;
+}
+
+.section--partial-background.section--partial-background--right-center {
+  background-position: 100%;
+  background-position-y: center;
+}
+
+.background-polygon-6 {
+  background-image: url(https://storage.googleapis.com/portal-assets/dtQrvgVlFP2VWV5IpTGZP5w179Wf9lad95vh9JHI/images/images/Background-Polygon/polygon-6.svg);
+}
+
+.background-polygon-8 {
+  background-image: url(https://storage.googleapis.com/portal-assets/dtQrvgVlFP2VWV5IpTGZP5w179Wf9lad95vh9JHI/images/images/Background-Polygon/polygon-8.svg);
+}
+

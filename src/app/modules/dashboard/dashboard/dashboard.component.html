@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <h3 class="title-section__header mt-4 mb-4">All Available Competitions</h3>
+    <hr>
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+        <label>Select Year</label>
+        <select class="form-select" aria-label="Select Year"
+          [(ngModel)]="selected" (ngModelChange)="onYearChanged($event)">
+          <option *ngFor="let year of years" [value]="year">{{year}}</option>
+        </select>
+      </div>
+    </div>
+    <app-loading *ngIf="loading"></app-loading>
+    <h5 *ngIf="!loading && competitions.length === 0" class="title-section__header mt-4 mb-4">
+      {{errorMessage}}
+    </h5>
+    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" *ngFor="let competition of competitions">
+      <app-card
+        [name]="competition.league.name"
+        [logo]="competition.league.logo"
+        label="See Teams"
+        (onClick)="redirectToTeams(competition)"
+      >
+      </app-card>
+    </div>
+  </div>
+</div>
