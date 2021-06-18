@@ -39,4 +39,3 @@ $ ng test
 ![List of Players](src/assets/img/players.png)
 
 ![List of Competitions- Mobile view](src/assets/img/competitions-mobile.png)
-
