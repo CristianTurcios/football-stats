@@ -2,26 +2,41 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.4.
 
-## Development server
+## Live Demo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+you can see a live demo [here](https://thirsty-curie-7274bc.netlify.app/).
 
-## Code scaffolding
+## Technologies
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Bootstrap 5
+- Angular 12
+- TypeScript
 
-## Build
+## Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+$ npm install
+```
 
-## Running unit tests
+## Running the app
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+# development
+$ ng serve -o
+```
 
-## Running end-to-end tests
+## Test
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+# unit tests
+$ ng test
+```
 
-## Further help
+## Web App Screenshots
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![List of Competitions](src/assets/img/competitions.png)
+
+![List of Players](src/assets/img/players.png)
+
+![List of Competitions- Mobile view](src/assets/img/competitions-mobile.png)
+
