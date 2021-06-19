@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-
 .button {
   align-items: center;
   background-color: #ffffff;
@@ -27,6 +26,12 @@
   width: auto;
 }
 
+.search-no-border input{
+  border: none;
+  border-bottom: #334652 1px solid;
+  border-radius: 0%;
+}
+
 .button--primary {
   background-color: #ff7c5f;
   border-color: #ff7c5f;
@@ -37,10 +42,12 @@
   color: #FF7C5F;
   cursor: pointer;
   display: inline-block;
-//   font-family: var(--primary-font);
   font-size: 14px;
   font-size: .875rem;
   font-weight: 400;
   margin-bottom: 5px;
   text-decoration: none;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

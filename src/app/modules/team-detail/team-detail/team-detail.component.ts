@@ -18,6 +18,13 @@ export class TeamDetailComponent implements OnInit {
   year: number = new Date().getFullYear();
   teamDetail: Array<TeamDetail> = [];
 
+  initial: number = 0;
+  pageSize: number = 12;
+  limit: number = this.pageSize;
+  index: number = 0;
+  countTeamDetail: number = 0;
+  paginatedTeamDetail: Array<TeamDetail> = [];
+
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
@@ -35,10 +42,38 @@ export class TeamDetailComponent implements OnInit {
     });
   }
 
+  doFilter = ($event: any) => {
+    const value = $event.target.value.trim().toLocaleLowerCase();
+    const filtered = this.teamDetail.filter((element: TeamDetail) => {
+      const name = element.player.name.trim().toLocaleLowerCase();
+      return name.includes(value);
+    });
+
+    this.paginatedTeamDetail = filtered;
+    if (filtered.length === 0) {
+      this.errorMessage = 'No results available with that filters 😔';
+    }
+  }
+
+  onChangePage($event: any): void {
+    if ($event.pageIndex > this.index) {
+      this.initial += this.pageSize;
+      this.limit += this.pageSize;
+      this.paginatedTeamDetail = this.teamDetail.slice(this.initial, this.limit);
+    } else {
+      this.initial -= this.pageSize;
+      this.limit -= this.pageSize;
+      this.paginatedTeamDetail = this.teamDetail.slice(this.initial, this.limit)
+    }
+    this.index = $event.pageIndex;
+  }
+
   getTeamDetail(league: number, team: number, year: number): void {
     this.teamDetailSuscription = this.footballService.getTeamDetail(league, team, year).subscribe((resp) => {
       if (resp.errors.length === 0) {
         this.teamDetail = resp.response;
+        this.countTeamDetail = this.teamDetail.length;
+        this.paginatedTeamDetail = this.teamDetail.slice(this.initial, this.pageSize);
       } else {
         this.errorMessage = 'The api limit was reached 😔';
       }
