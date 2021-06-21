@@ -12,9 +12,17 @@ you can see a live demo [here](https://thirsty-curie-7274bc.netlify.app/).
 - Angular 12
 - TypeScript
 
+## Requirements
+
+- Shows a list of all competitions based on a season input by user.
+- Selecting a competition shows all the teams for that competition on a DIFFERENT page
+- Selecting a team shows ANOTHER page with team information and a list of all players on that team
+- Allow the ability to navigate to previous pages and select another value.
+
 ## Installation
 
 ```bash
+# Installation
 $ npm install
 ```
 
@@ -35,6 +43,8 @@ $ ng test
 ## Web App Screenshots
 
 ![List of Competitions](src/assets/img/competitions.png)
+
+![List of Teams](src/assets/img/teams.png)
 
 ![List of Players](src/assets/img/players.png)
 
