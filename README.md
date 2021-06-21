@@ -11,6 +11,7 @@ you can see a live demo [here](https://thirsty-curie-7274bc.netlify.app/).
 - Bootstrap 5
 - Angular 12
 - TypeScript
+- Angular Material
 
 ## Requirements
 
